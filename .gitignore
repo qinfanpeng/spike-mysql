@@ -9,6 +9,11 @@
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
+out
+build
+src/test/resources/star2002-1.csv
+src/test/resources/star2002-2.csv
+src/test/resources/star2002-3.csv
 
 # Package Files #
 *.jar

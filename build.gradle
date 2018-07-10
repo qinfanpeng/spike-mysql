@@ -1,0 +1,23 @@
+plugins {
+    id 'org.springframework.boot' version '1.5.9.RELEASE'
+    id 'java'
+}
+
+jar {
+    baseName = 'springMySQL'
+    version =  '0.0.1-SNAPSHOT'
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-devtools")
+    compile group: 'com.opencsv', name: 'opencsv', version: '4.1'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+}
