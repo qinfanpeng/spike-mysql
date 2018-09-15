@@ -1,7 +1,10 @@
-use ies;
 
-drop procedure if exists tmp_procedure;
-create procedure tmp_procedure()
+-- Usage. mysql -uroot -D spike_mysql < test/resources/tmp_procedure.sql
+delimiter //
+-- use spike_mysql;
+
+drop procedure if exists spike_mysql.tmp_procedure;
+create procedure spike_mysql.tmp_procedure()
   BEGIN
     DECLARE done BOOLEAN DEFAULT 0;
     DECLARE all_connections TEXT DEFAULT '';
@@ -38,3 +41,5 @@ create procedure tmp_procedure()
 call tmp_procedure();
 
 DROP PROCEDURE IF EXISTS tmp_procedure;
+
+//
